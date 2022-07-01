@@ -1,0 +1,1112 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'),
+     url(../fonts/PTSans-NarrowBold.woff2) format('woff2'),
+     url(../fonts/PTSans-NarrowBold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*------------------------------------------------VARIABLES*/
+
+
+:root {
+    --basic-black: #000000;
+    --hover-black: #242424;
+    --basic-white: #FFFFFF;
+    --basic-gray: #ABA9A7;
+    --light-gray:#E5E5E5 ;
+    --beige: #F9F6F3;
+
+    --special: #663D15;
+}
+
+
+/*---------------------------------------------------GLOBAL*/
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--basic-black);
+    background-image: url(../img/fon_index.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+a {
+    text-decoration:none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden { 
+position: absolute; 
+width: 1px; 
+height: 1px;
+margin: -1px; 
+border: 0; 
+padding: 0; 
+white-space: nowrap; 
+clip-path: inset(100%); 
+clip: rect(0 0 0 0); 
+overflow: hidden; 
+}
+
+
+/*------------------------------------------------GRID*/
+
+
+
+.page {
+    height: 100%;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+
+
+
+/*---------------------------------------------NAVIGATION*/
+
+
+
+.main-header-bar {
+    background-color: var(--basic-black);
+    margin-bottom: 60px;
+}
+
+.navigation-wrapper {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-navigation {
+    display: grid;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--basic-white);
+}
+
+.main-haeder-logo {
+    order: 1;
+    justify-self: center;
+    margin-bottom: 80px;
+
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.site-navigation-item a{
+  display: block;
+  padding: 25px 20px;
+
+}
+
+.main-navigation-login {
+  position: relative;
+  max-width: 140px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  padding-left: 20px;
+} 
+
+.user-navigation {
+    padding: 0px;
+    margin: 0px;
+}
+
+.link-login {
+    display: block;
+    position: relative;
+    padding: 25px 20px;
+    padding-left: 40px;
+    text-align: right;
+}
+
+.link-login::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 15px;
+    height: 14px;
+    width: 14px;
+    background-image: url(../img/login.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.link-login:hover::before,
+.link-login:focus::before,
+.link-login:active::before{
+    opacity: 1;
+}
+
+.site-navigation-item {
+    margin: 0px;
+    padding: 0px;
+}
+
+.link-login,
+.site-navigation-item a {
+    color: var(--basic-white);
+    margin-right: 5px;
+}
+
+.navigation-wrapper a:hover,
+.navigation-wrapper a:focus{
+    background-color: var(--hover-black);
+}
+
+
+
+/*-----------------------------------------------FEATURES*/
+
+
+
+.features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    list-style: none;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.features-item{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 70px;
+}
+
+.features-item h3 {
+    position: relative;
+    font-size: 30px;
+    line-height: 42px;
+    margin: 0;
+    margin-bottom: 60px;
+    
+}
+
+.features-item h3:after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+
+
+/*-----------------------------------------------INDEX COLUMNS*/
+
+
+
+.index-content-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    color: var(--basic-black);
+    background-color: var(--beige);
+
+    background-image: url(../img/shape.png),
+                      url(../img/bege_background.jpg);
+                      
+    background-position:center, 0 0;
+    background-repeat: no-repeat, repeat;
+}
+
+.index-content-columns h2 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+
+
+/*-----------------------------------------NEWS*/
+
+
+.index-content-columns time {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 25px;
+}
+
+.index-content-columns  p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.news {
+    width: 380px;
+    padding-left: 80px;
+    margin-top: 47px;
+}
+
+.news h2 {
+    margin-top: 0px;
+}
+
+.news-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.button {
+    font:inherit ;
+    display: inline-block;
+    color: var(--basic-white);
+    background-color: var(--basic-black);
+    padding: 10px 30px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: var(--special);
+}
+
+.btn-news {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+/*-----------------------------------------------PHOTO GALLERY */
+
+
+
+
+.gallery {
+    width: 300px;
+    margin-right: 85px;
+    margin-top: 47px;
+}
+
+.gallery h2 {
+    margin-top: 0px;
+}
+
+.gallery-container {
+    position: relative;
+    height: 260px;
+}
+
+.gallery-content {
+    height: 164px;
+    margin: 0px;
+    background-color: var(--light-gray);
+    border: 7px solid var(--basic-white);
+}
+
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+  margin: 0px;
+  padding: 0px;
+  }
+
+.btn-gallery {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    width: 140px;
+}
+
+.btn-back {
+    left: 0;
+}
+
+.btn-next {
+    right: 0;
+}
+
+/*-----------------------------------------------CONTACTS*/
+
+.contact-info {
+    width: 380px;
+    padding-left: 80px;
+    margin-top: 47px;
+}
+
+.contact-info h2 {
+    margin-top: 0px;
+}
+
+.contact-info p {
+    margin-bottom: 22px;
+}
+
+.phone-contact {
+    color: inherit;
+}
+
+.contacts-button-map {
+    margin-right: 20px;
+}
+
+.btn-contacns {
+    margin-bottom: 95px;
+}
+
+/*----------------------------------------------APPOINTMENT*/
+
+.appointment{
+    width: 300px;
+    height: 340px;
+    margin-right: 85px;
+    margin-top: 47px;
+}
+
+.appointment h2 {
+    margin-top: 0px;
+}
+
+.appointment input:not(.appointment-button) {
+    box-sizing: border-box;
+    width: 140px;
+    height: 43px;
+    padding-left: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font: inherit;
+    border: 2px solid #000101;
+    background: transparent;
+}
+
+.appointment input:hover,
+.appointment input:focus{
+    border-color: var(--special);
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-form-item {
+    width: 140px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.appointment-button {
+    width: 100%;
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+.appointment-form-item label {
+    display: inline-block;
+    margin-left: 17px;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+
+/*------------------------------------------------FOOTER*/
+
+
+.main-footer {
+    color: var(--basic-white);
+    background-color: var(--basic-black);
+    background-image: url(../img/black_background.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+    min-height: 200px;
+}
+
+.main-footer p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-footer .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-contacts,
+.footer-social,
+.footer-develops {
+    margin-top: 60px;
+    padding: 0px;
+}
+
+.footer-social-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.footer-social-list li {
+    margin-top: 10px;
+}
+
+.footer-contacts a {
+    color: var(--basic-white);
+    text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+    text-decoration: none;
+}
+
+.footer-develops {
+    justify-self: end;
+    text-align: center;
+}
+
+.footer-develops a {
+    color: var(--basic-white);
+}
+
+.footer-develops a:hover,
+.footer-develops a:focus {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.heading-develops {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-social {
+    justify-self: center;
+    width: 140px;
+    text-align: center;
+}
+
+.footer-social svg:hover rect,
+.footer-social svg:focus rect {
+    fill: white;
+}
+
+.footer-social svg:hover path,
+.footer-social svg:focus path{
+    fill: black;
+}
+
+.btn-develops {
+    display: inline-block;
+    margin-top: 12px;
+
+}
+
+/*-------------------------------------------------------MODAL*/
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: var(--basic-black);
+    background-color: var(--beige);
+    background-image: url(../img/bege_background.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-login {
+    width: 460px;
+    height: min-content;
+    margin-top: 120px;
+    box-sizing: border-box;
+    padding: 50px 80px;
+}
+
+.modal h2{
+    margin: 0px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-login h2+p {
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.modal-login  input {
+    font: inherit;
+    border: 3px solid #000101;
+    background: transparent; 
+    text-transform: uppercase;
+
+}
+
+.modal-login  input:hover,
+.modal-login  input:focus{
+    border-color: var(--special);
+}
+
+.modal-login a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+.modal-login a:hover,
+.modal-login a:focus{
+    text-decoration: none;
+}
+
+.modal-login-form input[type="email"],
+.modal-login-form input[type="password"] {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.modal-login-help {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.modal-login-button {
+    border: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 19px;
+    height: 19px;
+    border: 0;
+    background-image: url(../img/close.svg);
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.modal-login-checkbox + label {
+    position: relative;
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+.modal-login-checkbox + label:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 2px;
+    left: -32px;
+    border: 3px solid var(--basic-black);
+}
+
+.modal-login-checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 6px;
+    left: -28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/cross.svg);
+}
+
+
+.modal-map {
+    margin-top: 585px;
+    padding: 0px;
+    width: 755px;
+    height: 550px;
+    border: 10px solid var(--basic-white);
+    background-color: var(--basic-white);
+}
+
+
+.yandex-map-frame {
+    margin: 0px;
+    padding: 0px;
+    width: 755px;
+    height: 550px;
+    border: 0;
+}
+
+ 
+
+
+/*---------------------------------------------------------CATALOG PAGE*/
+
+
+
+
+.inner-page{
+    background-color: var(--beige);
+    color: var(--basic-black);
+    background-image: url(../img/bege_background.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.main-header-bar .main-header-bar {
+    margin-bottom: 50px;
+}
+
+.inner-page ul {
+    list-style: none;
+}
+
+.inner-page h2 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.inner-page .navigation-wrapper {
+  grid-template-columns: 170px 1fr min-content;
+}
+
+.inner-page .site-navigation {
+    max-width: 90%;
+}
+
+.inner-page .main-haeder-logo {
+  order: 0;
+  padding-top: 24px;
+  margin: 0px;
+}
+
+.catalog-tittle {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.catalog-grid-column {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    column-gap: 10px;
+}
+
+.catalog {
+    margin-left: 60px ;
+}
+
+
+
+/*----------------------------------------------------------BREAD CRUMBS*/
+
+
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;   
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.breadcrumbs li {
+    position: relative;
+    margin-right: 40px;
+}
+
+.breadcrumbs li:not(.breadcrumbs-current)::after {
+    content: " ";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 7px;
+    right: -20px;
+    margin-right: -2.5px;
+    background-color: var(--basic-black);
+    transform: rotate(45deg);
+}
+
+.breadcrumbs a {
+    color: var(--basic-black);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs-current{
+    color: var(--basic-gray);
+}
+
+
+
+/*--------------------------------------------------------------FILTRS*/
+
+
+
+.filters {
+    list-style: none;
+}
+
+.filter {
+    padding: 0px;
+    padding-top: 30px;
+    margin: 0px;
+    margin-bottom: 50px;
+    border: none;
+}
+
+.filter ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.filters legend {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.filter-option {
+    margin-bottom: 20px;
+    padding-left: 45px;
+}
+
+.filter-option label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -45px;
+    height: 16px;
+    width: 16px;
+    border: 3px solid black;
+}
+
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -41px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.filter-input-radio +label::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -45px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.filter-input-radio:checked +label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -38px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black; 
+}
+
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label,
+.filter-input-radio:hover + label,
+.filter-input-radio:focus + label{
+  color: var(--special);
+}
+
+
+
+/*---------------------------------------------------------LIST OF PRODUCT*/
+
+
+
+.catalog-item {
+    background: var(--basic-white);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    min-height: 286px;
+}
+
+.catalog-item a {
+    display: flex;
+    flex-direction: column;
+    color: var(--basic-black);
+}
+
+.catalog-item-image {
+    margin: 0px;
+    padding: 0px;
+}
+
+.catalog-item h3{
+    font-size: 14px;
+    line-height: 18px;
+    order: 1;
+    margin: 12px 16px 12px 16px;
+}
+
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 45px;
+}
+
+.catalog-category {
+    text-transform: none;
+}
+
+.catalog-item-price {
+    display: flex;
+    margin: 0px 16px 16px 16px;
+}
+
+.catalog-item-price b {
+    width: 112px;
+    padding: 13px 25px 11px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    background-color: var(--light-gray);
+
+}
+
+.catalog-item-price .button {
+    line-height: 18px;
+    padding: 13px 18px;
+
+}    
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.pagination a {
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    box-sizing: border-box;
+    margin-right: 7px;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--basic-white);
+    background-color: var(--basic-black);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
+  background-color: var(--special);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+
+
+/*-----------------------------------------------BAXTER OF CALIFORNIA*/
+
+
+
+.main-baxter-of-california {
+    color: var(--basic-black);
+    background-color: var(--beige);
+    background-image: url(../img/bege_background.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.main-baxter-of-california ul {
+    list-style: none;
+}
+
+.main-baxter-of-california h1 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.main-baxter-of-california h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.product-photo-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0px;
+}
+
+.product-photo-preview li {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3)); 
+}
+
+.product-photo-full{
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));    
+}
+
+.product-articul {
+
+    color: #AEAEAE;
+    text-align: right;
+}
+
+
+
+/*---------------------------------------------------------Baxter of California page*/
+
+
+
+.product-grid-column {
+    display: grid;
+    grid-template-columns: 460px 1fr;
+}
+
+.page-baxter-of-california h1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    margin:0px;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    width: 390px;
+    padding-left: 80px; 
+}
+
+.product-description{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.product-text {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 40px;
+    font-weight: 100;
+}
+
+.page-baxter-of-california .catalog-item-price {
+    margin: 0px 0px 60px 0px;
+}
+
+.product-info h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-set {
+    margin: 20px 0px 0px 0px;
+    padding:0px 0px 0px 20px;
+}
+
+.product-set li{
+    position: relative;
+
+}
+
+.product-set li::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--basic-black);
+    transform: rotate(45deg);
+    left: -20px;
+    top: 8px;
+}
