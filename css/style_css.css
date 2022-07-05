@@ -675,7 +675,7 @@ overflow: hidden;
 
 
 .modal-map {
-    margin-top: 585px;
+    margin-top: 15vh;
     padding: 0px;
     width: 755px;
     height: 550px;
@@ -1109,4 +1109,8 @@ overflow: hidden;
     transform: rotate(45deg);
     left: -20px;
     top: 8px;
+}
+
+.hidden {
+    display: none;
 }
