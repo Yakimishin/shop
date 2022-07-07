@@ -62,10 +62,9 @@ loginForm.addEventListener('submit', function(evt){
 	if(!innerLogin.value || !innerPassword.value){
 		evt.preventDefault();
 		loginPopup.classList.add('modal-error');
-		console.log('Заполните форму!');
 	}else{
 		if(isStorageSupport){
-			localStorage.setItem('login',innerlogin.value);
+			localStorage.setItem('login',innerLogin.value);
 		}
 	}
 })
@@ -74,7 +73,6 @@ window.addEventListener('keydown', function(evt){
 	if(evt.keyCode === 27){
 		for(i=0; i<modals.length; i++){
 			modals[i].classList.add('hidden');
-			loginPopup.classList.remove('modal-error');
 		}
 	}
 })

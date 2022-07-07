@@ -567,7 +567,7 @@ overflow: hidden;
     background-repeat: repeat;
     background-position: 0 0;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-    animation: bounce 1s 1 ease-out;
+    animation: bounce 0.6s 1 ease-out;
 }
 
 .modal-login {
