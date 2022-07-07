@@ -45,6 +45,7 @@ login.addEventListener('click', function(evt){
 
 closeLoginPopup.addEventListener('click', function(){
 	loginPopup.classList.add('hidden');
+	loginPopup.classList.remove('modal-error');
 	innerLogin.value = '';
 });
 
@@ -60,6 +61,7 @@ mapClose.addEventListener('click', function(){
 loginForm.addEventListener('submit', function(evt){
 	if(!innerLogin.value || !innerPassword.value){
 		evt.preventDefault();
+		loginPopup.classList.add('modal-error');
 		console.log('Заполните форму!');
 	}else{
 		if(isStorageSupport){
@@ -72,6 +74,7 @@ window.addEventListener('keydown', function(evt){
 	if(evt.keyCode === 27){
 		for(i=0; i<modals.length; i++){
 			modals[i].classList.add('hidden');
+			loginPopup.classList.remove('modal-error');
 		}
 	}
 })

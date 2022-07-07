@@ -284,34 +284,38 @@
 		</div>	
 	</footer>
 
-	<section class="modal modal-login visually-hidden">
+	<section class="modal modal-login hidden">
 
 		<h2>личный кабинет</h2>
 
 		<p>введите пожалуста свой логин и пароль</p>
 
-		<form action="#" method="post">
+		<form class="modal-login-form" action="#" method="post">
+
 			<p>
-				<label for="inner-login">Логин</label>
-				<input type="email" name="login" id="inner-login" placeholder="email@example.com">
+				<label class="visually-hidden" for="inner-login">Логин</label>
+				<input type="email" name="login" id="inner-login" placeholder="email@example.com" required>
 			</p>
 
 			<p>
-				<label for="inner-password">Пароль</label>
-				<input type="password" name="password" id="inner-password" placeholder="••••••••">
+				<label class="visually-hidden" for="inner-password">Пароль</label>
+				<input type="password" name="password" id="inner-password" placeholder="••••••••" required>
 			</p>
 
-			<label>
-				<input type="checkbox" name="remember_my" checked>
-				запомнить меня
-		    </label>
+			<div class="modal-login-help">
+				<input class="modal-login-checkbox visually-hidden" type="checkbox" name="remember-my" id="remember-my" checked>
+				<label for="remember-my">запомнить меня</label>
 
-		    <a href="#">я забыл пароль!</a>
-
-		    <button class="button login-button" type="submit">войти</button>  
+			    <a href="#">я забыл пароль!</a>
+			</div>
+		    <button class="button modal-login-button" type="submit">войти</button>
 		</form>
 		
-		<button type="button">закрыть</button>
+		<button class="modal-close" type="button">
+			<span class="visually-hidden">закрыть</span>
+		</button>
 	</section>
+	
+	<script src="js/core.js" type="text/javascript"></script>
 </body>
 </html>
